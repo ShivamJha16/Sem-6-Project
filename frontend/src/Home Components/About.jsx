@@ -17,7 +17,6 @@ const About = () => {
     { id: 3, image: about3, title: "Our Services", text: "From corporate events to weddings, we handle every detail with creativity and professionalism." },
     { id: 4, image: about4, title: "Why Choose Us?", text: "With years of expertise and a dedicated team, we guarantee a seamless event experience." },
   ];
-
   return (
     <>
     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 text-yellow-500 underline" id="about">About us</h2>
