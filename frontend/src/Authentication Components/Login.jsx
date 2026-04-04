@@ -33,7 +33,7 @@ const Login = ({ onSwitch }) => {
         };
 
         try {
-            const { data } = await axios.post("http://localhost:8000/api/user/login", UserData);  
+            const { data } = await axios.post("https://evento-prs2.onrender.com/api/user/login", UserData);  
             localStorage.setItem("user", JSON.stringify(data));
             if(data.role === "admin") {
                 navigate("/dashboard");

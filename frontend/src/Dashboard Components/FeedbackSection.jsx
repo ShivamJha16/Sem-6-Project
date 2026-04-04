@@ -6,7 +6,7 @@ const FeedbackSection = () => {
 
     const getFeedbacks = async () => {
         try {
-            const { data } = await axios.get('http://localhost:8000/api/feedback');
+            const { data } = await axios.get('https://evento-prs2.onrender.com/api/feedback');
             setFeedbacks(data);
         } catch (error) {
             console.error(error);

@@ -10,7 +10,7 @@ const EventModal = ({ onClose }) => {
 
     const fetchUserEvents = async () => {
         try {
-            const { data } = await axios.get('http://localhost:8000/api/event', {
+            const { data } = await axios.get('https://evento-prs2.onrender.com/api/event', {
                 headers: {
                     Authorization: `Bearer ${user.token}`
                 }
@@ -33,7 +33,7 @@ const EventModal = ({ onClose }) => {
 
     const handleCancel = async (eventId) => {
         try {
-            await axios.put(`http://localhost:8000/api/event/cancel`, { eventId, status: "cancel" }, {
+            await axios.put(`https://evento-prs2.onrender.com/api/event/cancel`, { eventId, status: "cancel" }, {
                 headers: {
                     Authorization: `Bearer ${user.token}`
                 }

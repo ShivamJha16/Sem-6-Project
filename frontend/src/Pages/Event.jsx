@@ -42,7 +42,7 @@ const Event = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      const { data } = await axios.post("http://localhost:8000/api/event", formData, {
+      const { data } = await axios.post("https://evento-prs2.onrender.com/api/event", formData, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

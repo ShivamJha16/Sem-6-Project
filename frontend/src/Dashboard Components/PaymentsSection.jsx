@@ -9,7 +9,7 @@ const PaymentsSection = () => {
 
   const fetchPayments = async () => {
     try {
-      const { data } = await axios.get('http://localhost:8000/api/payment/getAllPayments', {
+      const { data } = await axios.get('https://evento-prs2.onrender.com/api/payment/getAllPayments', {
         headers: {
           Authorization: `Bearer ${user.token}`
         }

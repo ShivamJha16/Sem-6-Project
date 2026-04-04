@@ -8,7 +8,7 @@ const EventBudgetModal = ({ onClose }) => {
 
     const fetchBudgets = async () => {
         try {
-            const { data } = await axios.get(`http://localhost:8000/api/budget/${selectedEvent._id}`, {
+            const { data } = await axios.get(`https://evento-prs2.onrender.com/api/budget/${selectedEvent._id}`, {
                 headers: {
                     Authorization: `Bearer ${user.token}`
                 }

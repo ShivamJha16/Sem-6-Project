@@ -11,7 +11,7 @@ const FeedbacksModal = ({onClose}) => {
         e.preventDefault();
         try {
             const newFeedback = { content, rating, userId: user._id };
-            await axios.post('http://localhost:8000/api/feedback', newFeedback, {
+            await axios.post('https://evento-prs2.onrender.com/api/feedback', newFeedback, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             alert('Feedback submitted successfully!');   
