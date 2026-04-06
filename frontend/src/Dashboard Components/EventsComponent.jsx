@@ -9,7 +9,7 @@ const EventsComponent = () => {
 
   const fetchEvents = async () => {
     try {
-      const { data } = await axios.get(`https://evento-prs2.onrender.com/api/event/allEvent`, {
+      const { data } = await axios.get(`http://localhost:8000/api/event/allEvent`, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       setEvents(data);
@@ -29,7 +29,7 @@ const EventsComponent = () => {
 
   const handleApprove = async (eventId) => {
     try {
-      await axios.put(`https://evento-prs2.onrender.com/api/event/status`, { eventId, status: "approved" }, {
+      await axios.put(`http://localhost:8000/api/event/status`, { eventId, status: "approved" }, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       alert("Event Approved Successfully!");
@@ -42,7 +42,7 @@ const EventsComponent = () => {
 
   const handleReject = async (eventId) => {
     try {
-      await axios.put(`https://evento-prs2.onrender.com/api/event/status`, { eventId, status: "reject" }, {
+      await axios.put(`http://localhost:8000/api/event/status`, { eventId, status: "reject" }, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
       fetchEvents();

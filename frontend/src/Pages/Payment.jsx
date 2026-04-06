@@ -28,7 +28,7 @@ const Payment = () => {
           return;
         }
   
-        const { data } = await axios.post('https://evento-prs2.onrender.com/api/payment', {
+        const { data } = await axios.post('http://localhost:8000/api/payment', {
           amount: amountToPay,
           eventId: selectedBudget.eventId._id,
           budgetId: selectedBudget._id,
@@ -52,7 +52,7 @@ const Payment = () => {
           description: selectedBudget.eventId.eventName,
           order_id: data.orderId,
           handler: async function (response) {
-            await axios.post('https://evento-prs2.onrender.com/api/payment/verify', {
+            await axios.post('http://localhost:8000/api/payment/verify', {
               ...response,
               eventId: selectedBudget.eventId._id,
               budgetId: selectedBudget._id,

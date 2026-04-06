@@ -11,7 +11,7 @@ const BudgetModal = ({ onClose }) => {
     e.preventDefault();
     try {
         const newBudget = { amount, description, userId: user._id, status: "pending", eventId: selectedEvent._id };
-        const {data} = await axios.post("https://evento-prs2.onrender.com/api/budget/", newBudget,{
+        const {data} = await axios.post("http://localhost:8000/api/budget/", newBudget,{
             headers: { Authorization: `Bearer ${user.token}` },
         })
         console.log(data);

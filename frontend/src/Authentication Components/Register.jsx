@@ -34,7 +34,7 @@ const Register = ({ onSwitch }) => {
         };
 
         try {
-          const { data } = await axios.post("https://evento-prs2.onrender.com/api/user", UserData);  
+          const { data } = await axios.post("http://localhost:8000/api/user", UserData);  
             console.log(data);
             setLoading(false);
             localStorage.setItem("user", JSON.stringify(data));

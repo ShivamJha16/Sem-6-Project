@@ -7,7 +7,7 @@ const Budget = () => {
 
     const fetchBudgets = async () => {
         try {
-            const { data } = await axios.get("https://evento-prs2.onrender.com/api/budget/getAllBudgets", {
+            const { data } = await axios.get("http://localhost:8000/api/budget/getAllBudgets", {
                 headers: { Authorization: `Bearer ${user.token}` },
             });
             setBudgets(data);

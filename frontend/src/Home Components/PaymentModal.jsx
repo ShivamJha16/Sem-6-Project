@@ -9,7 +9,7 @@ const PaymentModal = ({ onClose }) => {
 
     const fetchPayment = async () => {
         try {
-            const { data } = await axios.get('https://evento-prs2.onrender.com/api/payment', {
+            const { data } = await axios.get('http://localhost:8000/api/payment', {
                 headers: {
                     Authorization: `Bearer ${user.token}`
                 }

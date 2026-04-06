@@ -11,22 +11,22 @@ const AdminDashboard = () => {
   }, []);
 
   const fetchEvents = async () => {
-    const res = await axios.get("https://evento-prs2.onrender.com/api/event");
+    const res = await axios.get("http://localhost:8000/api/event");
     setEvents(res.data);
   };
 
   const fetchFeedbacks = async () => {
-    const res = await axios.get("https://evento-prs2.onrender.com/api/feedback");
+    const res = await axios.get("http://localhost:8000/api/feedback");
     setFeedbacks(res.data);
   };
 
   const approveEvent = async (id) => {
-    await axios.put(`https://evento-prs2.onrender.com/api/event/approve/${id}`);
+    await axios.put(`http://localhost:8000/api/event/approve/${id}`);
     fetchEvents();
   };
 
   const rejectEvent = async (id) => {
-    await axios.put(`https://evento-prs2.onrender.com/api/event/reject/${id}`);
+    await axios.put(`http://localhost:8000/api/event/reject/${id}`);
     fetchEvents();
   };
 
